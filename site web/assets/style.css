@@ -1,0 +1,266 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    font-family: arial;
+    outline: none;
+}
+
+a{
+    text-decoration: none;
+    transition: .3s;
+    color: #000;
+}a:hover{
+    color: rgb(223, 88, 166);
+}
+
+h3{
+    font-weight: normal;
+    font-size: 20px;
+}
+
+body{
+    margin: 0;
+    background: rgb(242,179,217);
+    min-height: 100vh;
+}
+
+header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7.5px;
+    background: rgb(218,123,186);
+}
+
+button{
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+    transition: .3s;
+}button:hover{
+    filter: brightness(.9);
+}
+
+img{
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.logo{
+    position: absolute;
+    left: 25px;
+    color: #fff;
+    font-size: 25px;
+}
+
+.card{
+    background: #fff;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    overflow: hidden;
+}
+
+header input{
+    display: block;
+    width: 242px;
+    height: 35px;
+    padding: 0 20px;
+}
+
+content{
+    /*width: 1200px;*/
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+}
+
+aside{ 
+    min-width: 190px;
+    margin-right: 40px;
+}
+.menu{
+    padding: 20px 0;
+}
+aside a{
+    display: block;
+    padding: 5px;
+    color: #000;
+    font-size: 20px;
+}
+
+
+article .card{
+    margin-bottom: 20px;
+}
+
+article>.top{
+    justify-content: center;
+}
+
+article :is(.avatar, .about){
+    width: 330px;
+    height: 330px;
+}
+
+article .top .container:not(:last-child){
+    margin-right: 30px;
+}
+
+article .top .btns{
+    justify-content: space-between;
+}
+article .btns button{
+    height: 70px;
+    width: 150px;
+    font-size: 20px;
+}
+
+article .top .about{
+    padding: 1px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+article .top .about p{
+    font-size: 17px;
+    text-align: left;
+    margin: 11px 0;  
+}
+article .top .about a{
+    font-size: 15px;
+    margin-bottom: 40px;
+    margin-top: 23px;
+}
+
+.links{
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 0;
+    font-size: 20px;
+}.links a{
+    margin-bottom: 20px;
+}
+
+.photos{
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-bottom: 0;
+}
+.photos button{
+    width: 132px;
+    height: 132px;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    margin-bottom: 20px;
+}
+.photos button:not(:last-child){
+    margin-right: 20px;
+}
+
+.post{
+    padding: 17px;
+    text-align: left;
+}
+
+.post .top{
+    align-items: center;
+    margin-bottom: 10px;
+}
+.post .top .avatar{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.post p{
+    margin: 0;
+    font-size: 15px;
+}
+.post .top h3{
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.post .content{
+    margin-bottom: 10px;
+}
+
+.post .btns a{
+    padding: 6px 10px;
+    border-radius: 50px;
+    font-size: 14px;
+    background: rgb(237,237,237);
+}
+.post .btns a:not(:last-child){
+    margin-right: 15px;
+}
+
+.post .btns .like{
+    font-size: 18px;
+    padding: 3px 10px;
+}
+
+@media (max-width: 1000px){
+    content{
+        display: block;
+        padding: 0 20px;
+        margin: 20px 0;
+    }
+    aside{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .menu{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 750px){
+    article>.top{
+        display: block;
+    }
+    article .top .container{
+        margin: auto!important;
+        width: min-content;
+    }
+    article .top .btns{
+        width: 330px;
+    }
+    .links, .photos{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    :is(.links, .photos)>*{
+        margin: 0 10px 20px!important;
+    }
+    .menu{
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 0;
+    }
+    .menu a{
+        margin: 0 10px 20px;
+    }
+}
+
+
+
+
+
+
+
